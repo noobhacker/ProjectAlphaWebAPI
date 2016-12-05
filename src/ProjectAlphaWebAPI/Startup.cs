@@ -32,7 +32,8 @@ namespace ProjectAlphaWebAPI
             // Add framework services.
             services.AddMvc();
 
-            var connection = "DefaultConnection";
+            var connection = @"Server=tcp:projectalpha.database.windows.net,1433;Initial Catalog=projectalpha;Persist Security Info=False;User ID=mspfy17;Password=Leehsiangishandsome!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            //var connection = @"Data Source=DESKTOP-QJRT2I9;Initial Catalog=projectalpha;Integrated Security=False;User ID=sa;Password=!Microsoft123;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connection));
         }
 

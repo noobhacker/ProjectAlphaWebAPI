@@ -10,9 +10,18 @@ namespace ProjectAlphaWebAPI.Models
     {
             public DatabaseContext(DbContextOptions<DatabaseContext> options)
                 : base(options)
-            { }
+            {
+            Database.EnsureCreated();
+        }
 
-            public DbSet<Weather> Weathers { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Weather>();
+        }
+
+        public DbSet<Weather> Weathers { get; set; }
   
     }
 }
