@@ -33,5 +33,15 @@ namespace ProjectAlphaWebAPI.Models
         [Required]
         [DecimalPrecision(3,6)]
         public double Temperature { get; set; }
+        [Required]
+        [DecimalPrecision(3, 6)]
+        public double Pressure { get; set; }
+        [Required]
+        [DecimalPrecision(3, 6)]
+        public double Altitude { get; set; }
+
+        public double Latitude { get; set; }
+
+        public double Longitude { get; set; }
     }
 }

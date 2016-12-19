@@ -10,5 +10,11 @@ namespace ProjectAlphaWebAPI.Responses
         public string bestAccuracyLocationName { get; set; }
         public DateTimeOffset dateTime { get; set; }
         public double temperature { get; set; }
+        public double pressure { get; set; }
+        public double altitude { get; set; }
+
+        public double latitude { get; set; }
+
+        public double longitude { get; set; }
     }
 }

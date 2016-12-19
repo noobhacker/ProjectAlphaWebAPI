@@ -8,8 +8,8 @@ using ProjectAlphaWebAPI.Models;
 namespace ProjectAlphaWebAPI.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20161205160103_Initial")]
-    partial class Initial
+    [Migration("20161212071423_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -22,16 +22,24 @@ namespace ProjectAlphaWebAPI.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<double>("Altitude");
+
                     b.Property<string>("City")
                         .HasMaxLength(50);
 
                     b.Property<DateTimeOffset>("DateTime");
+
+                    b.Property<double>("Latitude");
+
+                    b.Property<double>("Longitude");
 
                     b.Property<string>("Park")
                         .HasMaxLength(50);
 
                     b.Property<string>("Postal")
                         .HasMaxLength(6);
+
+                    b.Property<double>("Pressure");
 
                     b.Property<string>("State")
                         .IsRequired()
