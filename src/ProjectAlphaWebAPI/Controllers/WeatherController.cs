@@ -51,7 +51,8 @@ namespace ProjectAlphaWebAPI.Controllers
             return Ok(result);
         }
 
-        public async Task<IActionResult> Post(Weather weather)
+        [HttpPost]
+        public async Task<IActionResult> Post([FromBody]Weather weather)
         {
             if (!ModelState.IsValid)
                 return BadRequest("Invalid JSON");
